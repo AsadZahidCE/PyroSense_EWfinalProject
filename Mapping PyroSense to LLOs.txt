@@ -1,0 +1,9 @@
+﻿Lab Learning Outcomes (LLOs) Achievement
+This project is a practical application of the outcomes defined in the EL1006 syllabus:
+LLO 2: System Assembly and Circuit Construction
+* Guided Hands-on Activity: I successfully assembled the electronic circuit and network components. This fulfills the requirements of Lab 5 (System Assembly) and Labs 8-11 (Circuit Construction).
+* Networking: By configuring the ESP32 to communicate with the "Fast Faculty" Wi-Fi and the Blynk IoT server, I applied the networking concepts introduced in Lab 13.
+PLO-01: Engineering Knowledge
+* I applied fundamental engineering principles to calibrate the smoke threshold and manage the logic states (HIGH/LOW) of the sensors to solve the real-world problem of fire safety.
+PLO-05: Modern Tool Usage
+* I utilized modern engineering and IT tools, specifically the Arduino IDE for programming, Blynk IoT for cloud-based monitoring, and GitHub for version control and documentation.
