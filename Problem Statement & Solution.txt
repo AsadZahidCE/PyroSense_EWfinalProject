@@ -1,0 +1,21 @@
+﻿Problem Statement
+Fire and gas leakages are significant safety hazards in both residential and industrial environments. Conventional fire alarms often suffer from several limitations:
+* Localized Alerts Only: Traditional alarms only provide a sound at the physical location. If the occupants are away from home, they have no way of knowing a fire has started until it is too late.
+* Single-Sensor Reliance: Many basic systems detect either only smoke or only heat. This leads to slower response times for fast-burning fires that produce minimal smoke initially.
+* Lack of Real-Time Monitoring: There is no way to monitor environmental safety levels remotely or receive digital records of safety breaches.
+In the context of modern engineering, there is a critical need for an interconnected system that not only alerts local occupants but also notifies remote users via cloud-based platforms.
+Proposed Solution: PyroSense
+To address these challenges, I have developed PyroSense, an IoT-integrated safety system built on the ESP32 platform. This project serves as a comprehensive solution by combining multi-sensor detection with cloud connectivity.
+Key Features of the Solution:
+1. Dual-Sensor Detection Architecture:
+   * I integrated the MQ-2 Smoke/Gas Sensor to monitor for smoldering fires and gas leaks (LPG/Propane).
+   * I incorporated the IR Flame Sensor to detect the infrared spectrum of open flames, ensuring immediate detection of high-intensity fires.
+2. Tiered Alert System:
+   * Local Alert: A high-decibel active buzzer and a flashing Red LED provide immediate feedback to anyone nearby.
+   * Cloud Alert: Utilizing the Blynk IoT framework, the system pushes real-time notifications to the user's smartphone and sends an automated emergency email.
+3. Visual Status Monitoring:
+   * The system features a "Heartbeat" indicator (Green LED) to confirm the device is online and the environment is safe, fulfilling the requirement for a user-friendly interface.
+4. Low-Power IoT Implementation:
+   * By using the ESP32 and Wi-Fi protocols (concepts learned in EL1006 Lab 13), the solution remains cost-effective, scalable, and easy to install in any Wi-Fi-enabled environment.
+Summary of the Engineering Approach
+Instead of a simple "Beep-only" alarm, PyroSense transforms fire safety into a data-driven IoT application. By mapping physical hazards to digital events, the proposed solution minimizes response time, potentially saving lives and reducing property damage through early intervention.
