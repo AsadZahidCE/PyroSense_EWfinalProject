@@ -1,0 +1,25 @@
+﻿PyroSense: IoT-Based Fire & Gas Safety System
+PyroSense is an intelligent safety solution designed to provide real-time environmental monitoring. By leveraging the power of the ESP32 and Blynk IoT, it ensures that homeowners are notified of potential hazards the moment they occur.
+ Component List
+1. The Core Controller
+* ESP32 DevKit V1: The central processing unit featuring integrated Wi-Fi. It manages sensor data processing and handles the encrypted connection to the Blynk Cloud.
+2. Detection Suite
+* MQ-2 Gas/Smoke Sensor: A high-sensitivity sensor capable of detecting LPG, Propane, Hydrogen, and Smoke particles. It provides real-time analog data for precise threshold monitoring.
+* IR Flame Detection Module: An infrared-based sensor that identifies the spectral signature of fire. It provides a high-speed digital trigger for instant fire detection.
+3. Alert & Notification Hardware
+* Active Piezo Buzzer: Provides a high-decibel audible alarm during emergency states.
+* Dual-LED Visual Indicators:
+   * Crimson Red LED: Dedicated for "Danger Mode" (flashing alert).
+   * Emerald Green LED: Dedicated for "Safe Mode" (steady heartbeat).
+* Current Limiting Resistors (220Ω): Precision resistors to maintain LED longevity and prevent voltage spikes.
+4. Prototyping & Power
+* PyroSense Breadboard Hub: A 830-point mounting station for all components.
+* Jumper Wire Harness: A mix of Male-to-Male and Male-to-Female wires for low-resistance signal paths.
+* Micro-USB Power Interface: Provides a stable 5V DC supply to the system.
+________________
+
+
+ System Architecture (Software)
+* Blynk IoT Platform: Used for the mobile dashboard and cloud-side logic.
+* Real-Time Email Gateway: Automated via Blynk's event logging system.
+* Mobile Push Notifications: Direct-to-smartphone alerts.
