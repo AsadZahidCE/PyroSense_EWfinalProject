@@ -6,25 +6,21 @@
 #include <WiFiClient.h>
 #include <BlynkSimpleEsp32.h>
 
-// --- Credentials ---
 char auth[] = BLYNK_AUTH_TOKEN;
 char ssid[] = "Fast Faculty"; 
 char pass[] = "Faculty@Fast987"; 
 
-// --- Pins ---
-const int smokePin = 34;    // Analog MQ-2
-const int flamePin = 35;    // Digital Flame Sensor
+const int smokePin = 34;    
+const int flamePin = 35;    
 const int buzzerPin = 32;   
 const int redLed = 33;      
 const int greenLed = 25;    
 
-// Threshold for ESP32 (0 - 4095)
 int smokeThreshold = 2000;  
 
 void setup() {
   Serial.begin(115200);
   
-  // Connect to Blynk
   Blynk.begin(auth, ssid, pass);
 
   pinMode(flamePin, INPUT);
@@ -41,19 +37,15 @@ void loop() {
   int smokeValue = analogRead(smokePin);
   int flameValue = digitalRead(flamePin);
 
-  // Monitor values in Serial Monitor
   Serial.print("Smoke Level: "); Serial.print(smokeValue);
   Serial.print(" | Flame Status: "); Serial.println(flameValue);
 
-  // ALARM CONDITION
   if (smokeValue > smokeThreshold || flameValue == LOW) {
     digitalWrite(greenLed, LOW); // Turn off Green
     
-    // Trigger Blynk Notification and Email
     Blynk.logEvent("fire_alert", "EMERGENCY: Smoke or Flame detected!");
-    Blynk.virtualWrite(V1, 1); // Update Dashboard widget
+    Blynk.virtualWrite(V1, 1); 
 
-    // Local Blinking Alarm
     digitalWrite(redLed, HIGH);
     digitalWrite(buzzerPin, HIGH);
     delay(200); 
