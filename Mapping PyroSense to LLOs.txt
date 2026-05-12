@@ -1,4 +1,4 @@
-﻿Lab Learning Outcomes (LLOs) Achievement
+﻿Lab Learning Outcomes (LLOs)  Achievement
 This project is a practical application of the outcomes defined in the EL1006 syllabus:
 LLO 2: System Assembly and Circuit Construction
 * Guided Hands-on Activity: I successfully assembled the electronic circuit and network components. This fulfills the requirements of Lab 5 (System Assembly) and Labs 8-11 (Circuit Construction).
